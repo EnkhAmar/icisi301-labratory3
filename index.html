@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,300 +8,66 @@
     <title>ICSI301 Лаборатори #3</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="light each-month-false">
-    <div class="header">
-        <div class="year-picker">
-            <span class="year-change" id="prev-year">
-                <pre>&lt;</pre>
-            </span>
-            <span id="year">2021</span>
-            <span class="year-change" id="next-year">
-                <pre>&gt;</pre>
-            </span>
-        </div>
-        <span>G. Enkh-Amar (18b1num0399)</span>
-        <div class="toggle">
-            <div class="each-month-toggle">
-                <span>Сараар харах</span>
+
+<body class="light show-by-year">
+    <div class="container">
+        <div class="header">
+            <div class="year-picker">
+                <!-- <span class="year-change" id="prev-year">
+                    <pre>&lt;</pre>
+                </span> -->
+                <span id="year">2021</span>
+                <!-- <span class="year-change" id="next-year">
+                    <pre>&gt;</pre>
+                </span> -->
             </div>
-            <div class="dark-mode-toggle">
-                <span>Dark Mode</span>
-                <div class="dark-mode-switch">
-                    <div class="dark-mode-switch-ident"></div>
+            <span>G. Enkh-Amar (18b1num0399)</span>
+            <div class="toggle">
+                <div class="each-month-toggle">
+                    <span id="byEachMonth">Сараар харах</span>
+                </div>
+                <div class="dark-mode-toggle">
+                    <span>Dark Mode</span>
+                    <div class="dark-mode-switch">
+                        <div class="dark-mode-switch-ident"></div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="description">
+            <ul class="ul-desc">
+            </ul>
+        </div>
+
+        <!-- <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-change" id="prev-month">
+                    <pre>&lt;</pre>
+                </span>
+                <span class="month-picker" id="month-picker">
+                    ${indexOfThatMonth+1}-р сар
+                </span>
+                <span class="month-change" id="next-month">
+                    <pre>&gt;</pre>
+                </span>
+            </div>
+
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days" id="${month_id[indexOfThatMonth]}"></div>
+            </div>
+        </div> -->
     </div>
-    <div class="calendar jan">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                January
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="jan">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar feb">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                February
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="feb">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar mar">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                March
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="mar">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar apr">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                April
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="apr">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar may">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                May
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="may">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar jun">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                June
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="jun">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar jul">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                July
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="jul">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar aug">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                August
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="aug">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar sep">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                September
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="sep">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar oct">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                October
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="oct">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar nov">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                November
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="nov">
-            </div>
-        </div>
-    </div>
-
-    <div class="calendar dec">
-        <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                December
-            </span>
-        </div>
-
-        <div class="calendar-body">
-            <div class="calendar-week-day">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-            <div class="calendar-days" id="dec">
-            </div>
-        </div>
-    </div>
-
-    <div class="description">
-        <ul class="ul-desc">
-        </ul>
-    </div>
-
-    
     <script src="script.js"></script>
 </body>
+
 </html>
